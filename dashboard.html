@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - إدارة المحتوى</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Dashboard Section -->
+    <section class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">لوحة التحكم</h2>
+
+            <!-- Products Management -->
+            <div class="bg-white rounded-lg shadow-lg p-5 mb-10">
+                <h3 class="text-2xl font-semibold mb-4">إدارة المنتجات</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="product-name">اسم المنتج</label>
+                        <input type="text" id="product-name" placeholder="اسم المنتج" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="product-price">السعر</label>
+                        <input type="number" id="product-price" placeholder="السعر" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition">إضافة منتج</button>
+                </form>
+            </div>
+
+            <!-- Offers Management -->
+            <div class="bg-white rounded-lg shadow-lg p-5 mb-10">
+                <h3 class="text-2xl font-semibold mb-4">إدارة العروض</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="offer-description">وصف العرض</label>
+                        <input type="text" id="offer-description" placeholder="وصف العرض" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="offer-discount">نسبة الخصم (%)</label>
+                        <input type="number" id="offer-discount" placeholder="نسبة الخصم" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition">إضافة عرض</button>
+                </form>
+            </div>
+
+            <!-- Orders Management -->
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <h3 class="text-2xl font-semibold mb-4">إدارة الطلبات</h3>
+                <table class="min-w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="text-left py-3 px-4">رقم الطلب</th>
+                            <th class="text-left py-3 px-4">العميل</th>
+                            <th class="text-left py-3 px-4">المجموع</th>
+                            <th class="text-left py-3 px-4">حالة الطلب</th>
+                            <th class="text-left py-3 px-4">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">#1234</td>
+                            <td class="py-3 px-4">أحمد</td>
+                            <td class="py-3 px-4">50.00 ر.س</td>
+                            <td class="py-3 px-4">قيد المعالجة</td>
+                            <td class="py-3 px-4">
+                                <button class="text-yellow-500 hover:text-yellow-700">تعديل</button>
+                                <button class="text-red-500 hover:text-red-700 ml-4">حذف</button>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">#1235</td>
+                            <td class="py-3 px-4">سارة</td>
+                            <td class="py-3 px-4">30.00 ر.س</td>
+                            <td class="py-3 px-4">تم الشحن</td>
+                            <td class="py-3 px-4">
+                                <button class="text-yellow-500 hover:text-yellow-700">تعديل</button>
+                                <button class="text-red-500 hover:text-red-700 ml-4">حذف</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Site Settings -->
+            <div class="bg-white rounded-lg shadow-lg p-5 mt-10">
+                <h3 class="text-2xl font-semibold mb-4">إعدادات الموقع</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="site-title">عنوان الموقع</label>
+                        <input type="text" id="site-title" placeholder="عنوان الموقع" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="contact-email">البريد الإلكتروني للتواصل</label>
+                        <input type="email" id="contact-email" placeholder="البريد الإلكتروني" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition">حفظ الإعدادات</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - مقهى مميز</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* خريطة */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function initMap() {
+            const cafeLocation = { lat: 24.7136, lng: 46.6753 }; // تغيير الإحداثيات لموقع المقهى
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: cafeLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: cafeLocation,
+                map: map,
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Contact Us Section -->
+    <section class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-10 text-gray-800">اتصل بنا</h2>
+
+            <!-- Contact Information -->
+            <div class="mb-10">
+                <h3 class="text-2xl font-semibold mb-4">معلومات التواصل</h3>
+                <p class="text-gray-600">الهاتف: 123-456-789</p>
+                <p class="text-gray-600">البريد الإلكتروني: info@yourcoffeeshop.com</p>
+                <p class="text-gray-600">العنوان: شارع 123، المدينة</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white rounded-lg shadow-lg p-5 mb-10">
+                <h3 class="text-2xl font-semibold mb-4">نموذج التواصل</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="name">الاسم</label>
+                        <input type="text" id="name" placeholder="الاسم" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" placeholder="البريد الإلكتروني" class="border border-gray-300 rounded p-2 w-full">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left mb-2" for="message">الرسالة</label>
+                        <textarea id="message" placeholder="اكتب رسالتك هنا" class="border border-gray-300 rounded p-2 w-full" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition">إرسال</button>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <h3 class="text-2xl font-semibold mb-4">موقعنا</h3>
+            <div id="map"></div>
+        </div>
+    </section>
+
+</body>
+</html>
